@@ -1,0 +1,20 @@
+{
+    // Is git enabled
+    "git.enabled": true,
+
+    // Path to the git executable
+    "git.path": "‪C:\\Program Files\\Git\\bin\\git.exe",
+    "json.schemas": [
+    
+    ],
+    "[json]": {
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    }
+}

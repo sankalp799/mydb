@@ -8,7 +8,7 @@ const expressAPI = require('express');
 const app = expressAPI();
 const layouts = require('express-ejs-layouts');
 const router = require('./routers/index');
-
+const authorRouter = require('./routers/author');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + "/views");
@@ -34,5 +34,6 @@ mongoDB.once('open', () => {
 
 // using routers
 app.use('/', router);
+app.use('/author', authorRouter);
 
 app.listen(process.env.PORT || 3300);

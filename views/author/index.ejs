@@ -1,1 +1,13 @@
-<h1>Author index</h1>
+<h1>Search Authors</h1><br />
+<form action="/author" method="GET">
+    <input type="text" name="authorName" value="<%- searchText %>">
+    <button type="submit">Search</button>
+</form>
+<br> <br>
+<div>
+    <% Authors.forEach((current) => { %>
+        <div>
+            <%- current.name %>
+        </div>
+        <% }); %>
+</div>

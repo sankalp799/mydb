@@ -8,13 +8,15 @@ const expressAPI = require('express');
 const app = expressAPI();
 const layouts = require('express-ejs-layouts');
 const router = require('./routers/index');
-const authorRouter = require('./routers/author');
+const authorRouter = require('./routers/authors');
+//const bodyParser = require('body-parser');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + "/views");
 app.set('layout', 'layouts/layout');
 app.use(layouts);
 app.use(expressAPI.static('static'));
+app.use(expressAPI.urlencoded({ limit: '20mb', extended: false }));
 
 // backend
 const mongoose = require('mongoose');
